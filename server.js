@@ -14,7 +14,6 @@ app.set("views", __dirname + "/views");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded( {extended:true} ));
 app.use(express.static(__dirname + "/public"));
-app.use(express.static(__dirname + "/views"));
 
 // PASSWORDS
 // =====================================================================
@@ -27,5 +26,5 @@ app.listen(port);
 console.log("Express server listening on port " + port);
 
 app.get("/",function(req,res){
-  res.sendfile("views/index.html")
+  res.sendfile("index.html")
 });
